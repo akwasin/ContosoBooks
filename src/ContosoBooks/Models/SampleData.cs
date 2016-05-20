@@ -1,5 +1,5 @@
 ﻿using Microsoft.Data.Entity;
-using  Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
@@ -23,7 +23,7 @@ namespace ContosoBooks.Models
                 context.Book.AddRange(
                     new Book()
                     {
-                        Title = "Pride and Predujuce",
+                        Title = "Pride and Prejudice",
                         Year = 1813,
                         Author = austen,
                         Price = 9.99M,
@@ -35,7 +35,15 @@ namespace ContosoBooks.Models
                         Year = 1817,
                         Author = austen,
                         Price = 12.95M,
-                        Genre = "Gothic parodyt"
+                        Genre = "Gothic parody"
+                    },
+                    new Book()
+                    {
+                        Title = "David Copperfield",
+                        Year = 1850,
+                        Author = dickens,
+                        Price = 15,
+                        Genre = "Bildungsroman"
                     },
                     new Book()
                     {
@@ -43,9 +51,9 @@ namespace ContosoBooks.Models
                         Year = 1617,
                         Author = cervantes,
                         Price = 8.95M,
-                        Genre = "Picareque"
+                        Genre = "Picaresque"
                     }
-                    );
+                );
                 context.SaveChanges();
             }
         }
